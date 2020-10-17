@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Доброо пожаловать в Игрозябру</title>
+	<link rel="shortcut icon" href="img/igrozjabra_logo.png" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<div class="game_title_box">
+	<h1 class="game_title">Слава Игрозябре!</h1></div>
+
+	<div class="game_field">
+		<div class="intro_message">
+			<p>Привет! Меня зовут Игрозябра! Даша создала меня, чтобы учиться кодить. Надеюсь я буду расти и крепнуть. Оцени меня, пожалуйста!</p>
+		</div>
+		<div class="game_box">
+			<a href="html/rock_paper_scissors.html">
+				<div id="rps" class="game_item">
+					<div id="logo_rps" class="game_icon">
+						<img class="game_icon_img" src="img/rock_paper_scissors_logo.png" alt="">
+					</div>
+					<div id="title_rps" class="game_item_title">Камень-Ножницы-бумага</div>
+				</div>
+			</a>
+			<div id="greetings" class="choose_game_text">
+				<p>Выбрать игру</p>
+			</div>
+			<div id="ttt" class="game_item">
+				<div id="logo_ttt" class="game_icon">
+					<img class="game_icon_img" src="img/tic_tac_toe_logo.png" alt="">
+				</div>
+				<div id="title_ttt" class="game_item_title">Крестики-Нолики</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="warning" class="warning">
+		<div class="warning_content">
+			<img src="img/warning_pic.png" alt="" class="warning_img">
+			<p class="warning_text">Упс! Даша еще не все успела доделать, но она будет стараться <strike>если не забьет на это все</strike>. Не обижайтесть и держите котиков :) </p>
+			<img src="img/cats.gif" alt="" class="cat">
+			<div><button id="btn" class="btn btn--warning">Лааадно, прощаю....</button></div>
+		</div>
+	</div>
+
+	<script>
+		var logo_rps =  document.getElementById("logo_rps");
+		var title_rps =  document.getElementById("title_rps");
+		var logo_ttt =  document.getElementById("logo_ttt");
+		var title_ttt =  document.getElementById("title_ttt");
+		var rps = document.getElementById ("rps");
+		var ttt = document.getElementById ("ttt");
+		var greetings = document.getElementById ("greetings");
+		
+	rps.onmouseenter = function() {
+		logo_rps.classList.add('rps_game_icon_hover');
+		title_rps.style.color = 'white';
+		greetings.style.color = 'white';
+	}
+	rps.onmouseleave = function() {
+		logo_rps.classList.remove('rps_game_icon_hover');
+		title_rps.style.color = '#242430';
+		greetings.style.color = '#242430';
+	}	
+	ttt.onmouseenter = function() {
+		logo_ttt.classList.add('ttt_game_icon_hover');
+		title_ttt.style.color = 'white';
+		greetings.style.color = 'white';
+	}
+	ttt.onmouseleave = function() {
+		logo_ttt.classList.remove('ttt_game_icon_hover');
+		title_ttt.style.color = '#242430';
+		greetings.style.color = '#242430';
+	}
+
+
+	</script>
+
+	<script>
+		var ttt = document.getElementById ("ttt");
+		var warning =  document.getElementById ("warning");
+		var close_warning =  document.getElementById ("btn");
+
+		ttt.addEventListener('click', function() {
+			warning.classList.add('warning_show');
+			close_warning.addEventListener('click', function() {
+			warning.classList.remove('warning_show');
+		});
+			
+});
+	</script>
+		<script>
+			var btn = document.getElementById ("btn");
+			btn.onmouseenter = function() {
+		btn.classList.remove('btn_out');
+		btn.classList.add('btn_in');
+	}
+			btn.onmouseleave = function() {
+		btn.classList.remove('btn_in');
+		btn.classList.add('btn_out');
+	}
+	</script>
+</body>
+</html>

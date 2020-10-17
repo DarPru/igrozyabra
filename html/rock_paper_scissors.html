@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Камень Ножницы Бумага</title>
+	<link rel="shortcut icon" href="img/igrozjabra_logo.png" type="image/x-icon">
+	<link rel="stylesheet" href="../style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+</head>
+<body>
+	<div class="game_title_box"><h1 class="game_title"> Камень Ножницы Бумага</h1></div>
+
+	<div class="game_field">
+
+		<div class="score_plate">
+			<div class="name user_name">Вы</div>
+			<div class="score"><span id="user_score">0</span>:<span id="comp_score">0</span></div>
+			<div class="name comp_name">Оно</div>
+		</div>
+
+		<div class="message">Выберайте оружие! </div>
+
+		<div class="images">
+			<div id="rock" class="image">
+				<img src="../img/rock.png" alt="">
+			</div>
+			<div id="paper" class="image">
+				<img src="../img/paper.png" alt="">
+			</div>
+			<div id="scissors" class="image">
+				<img src="../img/scissors.png" alt="">
+			</div>
+		</div>
+<div class="btn_box">
+	<a href="../index.html" id="btn" class="btn">С меня хватит!</a>
+</div>
+
+	</div>
+
+
+	<script src="../rock_paper_scissors_app.js"></script>
+	<script>
+			var btn = document.getElementById ("btn");
+			btn.onmouseenter = function() {
+		btn.classList.remove('btn_out');
+		btn.classList.add('btn_in');
+	}
+			btn.onmouseleave = function() {
+		btn.classList.remove('btn_in');
+		btn.classList.add('btn_out');
+	}
+	</script>
+</body>
+</html>
