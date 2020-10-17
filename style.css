@@ -291,3 +291,8 @@ img {
 }
 
 }
+@media (max-width: 1000px) {
+body {
+	display: none;
+}
+}
