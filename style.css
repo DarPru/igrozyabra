@@ -207,9 +207,9 @@ button:focus {
 }
 
 .btn_in {
-  -webkit-transform: scale(0.9);
-  -ms-transform: scale(0.9);
-  transform: scale(0.9);
+  -webkit-transform:translateX(-50%) scale(0.9) !important;
+  -ms-transform: translateX(-50%) scale(0.9) !important;
+  transform: translateX(-50%) scale(0.9) !important;
   transition: .3s;
 	cursor: pointer;
 	background-color: #242430;
