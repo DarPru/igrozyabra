@@ -42,7 +42,7 @@ swapTurns()
 
 function endGame (draw) {
 	if(draw) {
-		winningMessageText.innerText = 'Draw!'
+		winningMessageText.innerText = 'Ничья!'
 	} else {
 		winningMessageText.innerText = `${circuleTurn ? "Нолики " : "Крестики "} выигрывают!`
 	}
