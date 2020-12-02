@@ -418,6 +418,7 @@ margin: 25px auto;
 	width: 100vw;
 	height: 80vh;
 	background-image: url(img/field.png);
+	border: 1px solid #fff;
 	background-size: 30%;
 	background-position: center center;
 	background-repeat: no-repeat;
