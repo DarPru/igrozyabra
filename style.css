@@ -6,6 +6,10 @@
 a {
 	text-decoration: none;
 }
+html, body {
+    /* Убирает прокрутку по горизонтале, для мобильной версии */
+    overflow-x: hidden;
+}
 
 .game_title_box {
 	position: absolute;
@@ -198,8 +202,17 @@ button:focus {
 	text-align: center;
 	padding-top: 15px;
 	position: relative;
-	left: 50%;
-    transform: translateX(-50%)  !important;
+	
+ 
+}
+.btn:hover {
+	color: #fff;
+	background-color: #242430;
+	border: 1px solid #fff;
+}
+.btn--ttt {
+	
+	transform: translateY(-30px) !important;
 }
 .btn--warning {
 	font-size: 20px;
@@ -312,6 +325,35 @@ button:focus {
 		background-size: 70%;
 	
 }
+.winning_message {
+	position: fixed;
+	display: none;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,.9);
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	color: #fff;
+	font-size: 5rem;
+}
+.winning_message button {
+	font-size: 3rem;
+	background-color: #fff;
+	border: 1px solid #000;
+	padding: .25em .5em;
+	cursor: pointer;
+}
+.winning_message button:hover {
+	background-color: #000;
+	border: 1px solid #fff;
+	color: #fff;
+}
+.winning_message.show {
+	display: flex;
+}
 
 /*============Media=================*/
 
@@ -344,6 +386,108 @@ img {
 }
 
 }
+* {
+	
+	box-sizing: border-box;
+
+}
+body {
+	margin: 0;
+	
+}
+.game_title_box {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	width: 100%;
+	background-color: #fff;
+}
+.game_title {
+text-align: center;
+font-weight: 700;
+margin: 25px auto;
+}
+.game_field {
+	background: #242430;
+	height: 100vh;
+	width: auto;
+
+}
+.board {
+	width: 100vw;
+	height: 80vh;
+	background-image: url(img/field.png);
+	background-size: 30%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	grid-template-columns: repeat(3, auto);
+}
+.cell {
+	width: 100px;
+	height: 100px;
+	/*border: 1px solid #000;*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.cell.x {
+	background-image: url(img/cross.png);
+	background-size: 90%;
+	background-repeat: no-repeat;
+	background-position: center center;
+
+}
+
+.cell.o {
+	background-image: url(img/nough.png);
+	background-size: 90%;
+	background-repeat: no-repeat;
+	background-position: center center;
+
+}
+
+.winning_message {
+	position: fixed;
+	display: none;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,.9);
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	color: #fff;
+	font-size: 5rem;
+}
+.winning_message button {
+	height: 60px;
+	width: 240px;
+	border-radius: 30px;
+	background-color: #fff;
+	border: none;
+	font-size: 24px;
+	font-weight: 700;
+	color: #242430;
+	text-align: center;
+	cursor: pointer;
+}
+.winning_message button:hover {
+	background-color: #000;
+	border: 1px solid #fff;
+	color: #fff;
+}
+
+.winning_message.show {
+	display: flex;
+}
+
 /*media--------------------------------*/
 @media (max-width: 1024px) {
 #ttt {
